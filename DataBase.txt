@@ -1,0 +1,183 @@
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Grundlagen der Programmierung: Datenbanken
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++ Transaktionen
+ACISD 
+- Atomic Consistent Isolated Durable
+- Atomar Konsistent Isoliert Dauerhaft
+
+Atomic/Atomar:
+Eine Transaktion wird vollstaendig oder gar nicht ausgefuehrt
+
+Consistent/Konsistent:
+Jede Transaktion muss von einen gueltigen Zustand in einen anderen gueltigen Zustand ueberfuehren muss,
+basierend auf den Regeln der Datenbank 
+
+Isolated/Isolation:
+Daten sind fuer den Moment der Transaktion gesprerrt
+
+Durable/Dauerhaft:
+Transaktion ist robust, bedeutet eine Garantie der Durchfuehrung einer Transaktion
+
++ SQL
+- Structured Query Language
+
++ Entitaeten
+
++ ER-Modellierung
+Entity-Relationship-Modell
+
++ Attribute definieren
+
++ Primaerschluessel / zusammengesetzter Primaerschluessel
+
++ Beziehungskardinalitaeten
+- eins zu eins
+- eins zu viele
+- viele zu viele
+
++ Datenbanknormalisierung
+Edward Kotlin
+Dadurch soll ein minimum an redudanten Daten gewaehrleistet werden!
+- (1NF) Erste Normalform => Unteilbarkeit (Atomisierung)
+        - Mehrere Inhalte in einem einzigen Feld sind nicht erlaubt
+        - Mehrfache Inhalte sind unbrauchbar
+
+- (2NF) Zweite Normalform => Redundanz
+        - 
+  
+
+- (3NF) Dritte Normalform => Historie
+        - 
+
+- Denormalisierung
+
++ Datenmanipulation
+- SELECT
+- INSERT
+- UPDATE
+- DELETE
+
++ Datendefinition
+- CREATE
+- ALTER
+- DROP
+
++ Indizes
+
++ Schreibkonflikte
+- Pessimistische Sperre
+  Nur eine Transaktion moeglich
+- Optimistische Sperre
+
++ Vorgefertigte Prozeduren (store procedures)
++ Vorgefertigte Prozeduren mit Parameter
+
++ Desktop-Datenbanken
+- Microsoft Access
+
++ Relationale Datenbanken (RDBMS)
+- SQL Server | Fa. Microsoft | Released 1989 | SQL Server Management Studio  | Commercial  | Express
+- Oracle     | Fa. Oracle    | Released 1979 | Oracle SQL Developer          | Commercial  | Express
+- DB2        | Fa. IBM       | Released 1983 | IBM Data Studio               | Commercial  | Express-C
+- MySQL      | Fa. Oracle    | Released 1994 | MySQL Workbench               | Open Source | Community
+
++ XML- und objektorientierte Datenbanksysteme
+ Name  | License     | Query Language
+------------------------------------------
+ BaseX | Open Source | xQuery
+ Sedna | Open Source | xQuery
+ eXist | Open Source | xQuery
+------------------------------------------
+
++ RDBMS mit XML-Unterstuetzung
+ Name       | XML Column Type?
+------------------------------------------
+ Oracle     | Yes
+ DB2        | Yes 
+ SQL Server | Yes 
+ MySQL      | No - store as text
+------------------------------------------
+
++ Objektorientierte Datenbanksysteme
+- Objectivity/DB
+- Versant
+- VelocityDB
+
++ Object relational mapping (ORM)
+ ORM Framework | Language
+----------------------------------
+ Hibernate     | Java
+ Core Date     | Objective-C
+ ActiveRecord  | Ruby
+ NHibernate    | C# / VB.NET
+
++ NoSQL-Datenbanksysteme
+- CouchDB
+- MongoDB
+- Aache Cassandra
+- Hypertable
+- HBase
+- Neo4J
+- BigTable
+- Riak
+- Project Voldemort
+- Redis
+Eigenschaften von NoSQL-Datenbanken
+- nutzen kein SQL
+- besitzen keine Tabellen
+- haben keine Beziehungen unter den Tabellen
+- nicht ACID
+- kein formelles Schema
+- weborientiert
+- fuer sehr große Projekte
+- oftmals Open Source
+Daten werden in Dokumente gespeichert z.B. CouchDB, MongoDB
+Gruende fuer eine NoSQL-Datenbank:
+- Benoetigt man ein flexibles Schema
+- große Menge an Daten
+- Ist Skalierbarkeit wichtiger als Konsistenz
+
++ Transaktionen
+ACISD 
+- Atomic Consistent Isolated Durable
+- Atomar Konsistent Isoliert Dauerhaft
+
+Atomic/Atomar:
+Eine Transaktion wird vollstaendig oder gar nicht ausgefuehrt
+
+Consistent/Konsistent:
+Jede Transaktion muss von einen gueltigen Zustand in einen anderen gueltigen Zustand ueberfuehren muss,
+basierend auf den Regeln der Datenbank 
+
+Isolated/Isolation:
+Daten sind fuer den Moment der Transaktion gesprerrt
+
+Durable/Dauerhaft:
+Transaktion ist robust, bedeutet eine Garantie der Durchfuehrung einer Transaktion
+
++ SQL
+- Structured Query Language
+
++ Entitaeten
+
++ ER-Modellierung
+Entity-Relationship-Modell
+
++ Attribute definieren
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Tabellendesign fuer relationale Datenbanken
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++ Entity-Rlationship-Diagramm
+Drei Entwicklungsphasen
+- Storming
+- Norming
+- Performing

@@ -1,0 +1,77 @@
+Git und Github lernen
+
+- 201202 / LinkedIn
+++++++++++++++++++++++++++++++++++++
+
+Anlage eines Repositories
+$ git init
+
+Grundkonfiguration:
+(benoetigt man fuer den Befehl "commit"
+$ git config --global user.mail "test@gmx.de"
+$ git config --global user.name "malomu"
+
+Alle Dateien die in dieser Datei aufgelistet sind werden von git ignoriert werden.
+.gitignore
+
+$ git status
+
+Aenderungen der Datei "test.html" auf die Staging-Area verschieben
+$ git add test.html
+ODER
+$ git add .
+
+$ git commit -m "kommentar" 
+
+$ git diff test.html 
+
+$ git log --pretty=oneline
+
+Aenderungen rueckgaengig machen
+$ git revert hier steht die eindeutige Nummer
+$ git revert --continue
+
+Hier werden die letzten zwei commits unwiederbringlich geloescht
+$ git reset --hard HEAD~2
+
+Hier wird der letzte commit wirder goeffnet und man kann ihn nach der Anpassung neu commiten
+$ git reset --soft HEAD~1
+
+Hier kann man seine ganzen Aenderungen rueckgaengig machen und den urspruenglichen Zustand herstellen
+$ git checkout test.html
+
+Branches
+++++++++++++++++++++++++++++
+Branch anlegen 
+$ git checkout -b <Branche> 
+
+Branche wechseln (hier wird z.B. in den Haupt-Branch gewechselt)
+$ git checkout main
+
+Branch loeschen
+Hier kann es sein, dass man den Branch zuerst mergen muss
+$ git branch -d <Branche> 
+
+Branch loeschen erzwingen
+$ git branch -D <Branche> 
+
+Github
+++++++++++++++++++++++++++++
+Aenderungen auf den Server speichern
+git push
+
+Die neuesten Aenderungen von Github holen
+git pull
+
+TopTen der git-Befehle
+++++++++++++++++++++++++++++
+01) $ git status
+02) $ git add .                | es werden alle Dateien, die veraendert wurden in die Staging-Area, befor ich sie commite
+03) $ git commit -m "message" 
+04) $ git log --oneline
+05) $ git checkout <Branche> oder git checkout <Datei>
+06) $ git diff <Datei>
+07) $ git merge <Branche>
+08) $ git reset --soft HEAD~1 oder git reset --hard HEAD~1
+09) $ git revert HEAD~0        | hiermit wird der letzte commit rueckgaengig und zwar so dass er ein eigener commit ist
+10) $ git pull oder git push 
