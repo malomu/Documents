@@ -18,7 +18,7 @@ $ git status
 
 ## Aenderungen der Datei "test.html" auf die Staging-Area verschieben
 $ git add test.html
-ODER
+ODER wenn man alle Aenderungen auf die Staging-Area verschieben moechte
 $ git add .
 
 $ git commit -m "kommentar" 
@@ -78,3 +78,14 @@ TopTen der git-Befehle
 08) $ git reset --soft HEAD~1 oder git reset --hard HEAD~1
 09) $ git revert HEAD~0        | hiermit wird der letzte commit rueckgaengig und zwar so dass er ein eigener commit ist
 10) $ git pull oder git push 
+
+++++++++++++++++++++++++++++
+UNI-Bamber ToDo
+++++++++++++++++++++++++++++
+
+## Projekt aus GitHub auf den lokalen Rechner holen
+$ git clone https://github.com/malomu/bergtour.git
+
+## Aenderungen in GitHub einspielen
+  |-> Die Aenderungen sind jetzt im HEAD deines lokalen Repositories.
+$ git push origin master
