@@ -1,6 +1,4 @@
 Git und Github lernen
-
-- 201202 / LinkedIn
 ++++++++++++++++++++++++++++++++++++
 
 ## Anlage eines Repositories
@@ -80,11 +78,11 @@ TopTen der git-Befehle
 10) $ git pull oder git push 
 
 ++++++++++++++++++++++++++++
-UNI-Bamber ToDo
+Schritt fuer Schritt Anleitung
 ++++++++++++++++++++++++++++
 
 ## Projekt aus GitHub auf den lokalen Rechner holen
-$ git clone https://github.com/malomu/bergtour.git
+$ git clone https://github.com/xxxxx/xxxxx.git
 
 ## Aenderungen in GitHub einspielen
   |-> Die Aenderungen sind jetzt im HEAD deines lokalen Repositories.
