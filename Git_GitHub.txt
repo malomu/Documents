@@ -6,7 +6,7 @@ $ git init
 
 ## Grundkonfiguration:
 (benoetigt man fuer den Befehl "commit"
-$ git config --global user.mail "test@gmx.de"
+$ git config --global user.email "test@gmx.de"
 $ git config --global user.name "malomu"
 
 ## Alle Dateien die in dieser Datei aufgelistet sind werden von git ignoriert werden.
