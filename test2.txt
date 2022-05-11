@@ -1,2 +1,0 @@
-Erste Zeile von test2.txt
-Zweite Zeile von test2.txt
