@@ -42,17 +42,29 @@ $ git checkout test.html
 Branches
 ++++++++++++++++++++++++++++
 ## Branch anlegen 
-$ git checkout -b <Branche> 
+$ git checkout -b <branch name> 
 
 ## Branche wechseln (hier wird z.B. in den Haupt-Branch gewechselt)
 $ git checkout main
 
 ## Branch loeschen
 Hier kann es sein, dass man den Branch zuerst mergen muss
-$ git branch -d <Branche> 
+$ git branch -d <branche name> 
 
 ## Branch loeschen erzwingen
-$ git branch -D <Branche> 
+$ git branch -D <branche name> 
+
+## Remote-Repository
+   Mein Branch existriert nur lokal. Wie kann ich ihn zu meinem Remote-Git-Repository hinzufuegen?
+$ git push --set-upstraem origin <branch name>
+
+   GitHub Remote-Branch loeschen
+$ git push origin --delete <branch name>
+
+## Wie kann ich den main-branch mit den Aenderungen in meinem Branch aktualisierten?
+   Main-Branch wird mit Feature-Branch aktualisiert
+$ git checkout <Main-Branch>
+$ git merge <Feature-Branch>
 
 ++++++++++++++++++++++++++++
 Github
