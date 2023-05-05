@@ -34,7 +34,7 @@ $ git config --unset --global user.email
 
 #######################################
 
-## Alle Dateien die in dieser Datei aufgelistet sind werden von git ignoriert werden.
+## Alle Dateien die in dieser Datei aufgelistet sind, werden von git ignoriert werden.
 .gitignore
 
 $ git status
@@ -51,6 +51,9 @@ $ git diff test.html
 $ git log --pretty=oneline 
 oder
 $ git log --oneline
+
+## Aenderungen aller Dateien auf die Staging-Area verschieben und commiten
+$ git commit -am 'message'
 
 ## Aenderungen rueckgaengig machen
 $ git revert hier steht die eindeutige Nummer
