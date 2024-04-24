@@ -8,14 +8,17 @@ $ git init
 ++++++++++++++++++++++++++++
 Konfiguration
 ++++++++++++++++++++++++++++
+## Aktuelle Konfiguration anzeigen
+$ git config -l
+
 ## Grundkonfiguration (benoetigt man fuer den Befehl "commit"
 # Global fuer alle Repositories auf diesem Rechner setzen
 $ git config --global user.email "test@gmx.de"
 $ git config --global user.name "malomu"
 
 # Nur speziell fuer dieses Repository setzen
-$ git config user.email "test@gmx.de"
-$ git config user.name "malomu"
+$ git config --local user.email "test@gmx.de"
+$ git config --local user.name "malomu"
 
 ## Git einen bestimmten Editor fuer das bearbeiten der Commits zuweisen.
 # In bash
@@ -44,7 +47,7 @@ $ git add test.html
 ODER wenn man alle Aenderungen auf die Staging-Area verschieben moechte
 $ git add .
 
-$ git commit -m "kommentar" 
+$ git commit -m "Kommentar" 
 
 $ git diff test.html 
 
@@ -126,8 +129,9 @@ TopTen der git-Befehle
 Schritt fuer Schritt Anleitung
 ++++++++++++++++++++++++++++
 
-## Projekt aus GitHub auf den lokalen Rechner holen
-$ git clone https://github.com/xxxxx/xxxxx.git
+## Projekt aus GitHub auf den lokalen Rechner holen 
++ Diese URL kann man in GitHub über Clone HTTPS kopieren
+$ git clone https://github.com/malomu/testarea.git
 
 ## Aenderungen in GitHub einspielen
   |-> Die Aenderungen sind jetzt im HEAD deines lokalen Repositories.
