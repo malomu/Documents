@@ -137,3 +137,7 @@ $ git clone https://github.com/malomu/testarea.git
   |-> Die Aenderungen sind jetzt im HEAD deines lokalen Repositories.
 $ git push origin master
 
+## Branch in GitHub einspielen
+  |-> Die Änderungen sind aktuell in einem Branch
+$ git push --set-upstraem origin "branch name"
+
