@@ -97,8 +97,8 @@ $ git push --set-upstraem origin <branch name>
    GitHub Remote-Branch loeschen
 $ git push origin --delete <branch name>
 
-## Wie kann ich den main-branch mit den Aenderungen in meinem Branch aktualisierten?
-   Main-Branch wird mit Feature-Branch aktualisiert
+## Wie kann ich den main-branch mit den Aenderungen in meinem Branch aktualisieren?
++  Main-Branch wird mit Feature-Branch aktualisiert
 $ git checkout <Main-Branch>
 $ git merge <Feature-Branch>
 
