@@ -200,7 +200,13 @@ A   D   B   C
 + KI-Unterstützung
 ChatGPT
 GitHub Copilot (kostenpflichtig, 30 Tage Testversion)
+-----------------------------------------------
 
+# Bootstrap anpassen
++ Eigenen CSS-Code definieren
+
++ Sass und Autoprefixer
+https://www.sassmeister.com
 
 
 
