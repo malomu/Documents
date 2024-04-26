@@ -7,4 +7,201 @@ https://getbootstrap.com/docs/5.3/
 
 + Suchfunktion in der Bootstrap-Dokumentation aufrufen
 shift + strg + /
+-----------------------------------------------
+
+# Abstände 
++++++
++ p: padding - Innenabstand
++ m: margin - Außenabstand
+
+<div class="p-4 mt-3"> ... </div>
+t - für top (oben)
+b - für bottom (unten)
+s - für start
+e - für end
+
+px - links und rechts
+py - unten und oben
+p - für alle vier Seiten
+
+mx - links und rechts
+my - unten und oben
+m - für alle vier Seiten
+
+Die Größenangabe geht von 0 ... bis 5
+-----------------------------------------------
+
+# Farbdefinitionen
++++++
++ Hintergrundfarbe
+bg-primary
+bg-primary-subtle
+
++ Textfarbe
+text-primary-emphasis
+text-primary text-opacity-25 
+
++ Passende Textfarbe mit genügend großem Kontrast
++ Hier wird automatisch die Textfarbe entsprechend der Hintergrundfarbe angepasst
+<div class="text-bg-secondary"></div>
+-----------------------------------------------
+
+# Verschiedene Typen für Text, Button usw.
++ Jeder Typ hat eine vordefinierte Farbe
+primary
+secondary
+sucess
+danger
+warning
+info
+light
+dark
+
+<div class="bg-info"></div>
+<p class="text-primary"></p>
+
++ Beispiel einer Link-Formatierung 
+(Unterstrich wird transparent dargestellt)
+<p><a href="#" class="  link-primary 
+                        link-underline-danger 
+                        link-underline-opacity-25">Primary link</a></p>
+
+(Unterstrich wird transparent dargestellt, aber sobald die Maus an den Link kommt wird der Unterstrich voll angezeigt)
+<p><a href="#" class="  link-primary ()
+                        link-underline-danger 
+                        link-underline-opacity-25
+                        link-underline-opacity-100-hover">Primary link</a></p>
+-----------------------------------------------
+
+# Dark Mode
++ Mit diesem Befehl wird die ganze Website in den Dark Mode versetzt
+<html lang="de" data-bs-theme="dark">
+
++ Es gibt zwei Einstellmöglichkeiten
+data-bs-theme="dark"
+data-bs-theme="light"
+-----------------------------------------------
+
+# Raster- und responsive Layouts
+Standard in Bootstrap ist ein 12-Spaltiges Raster
+Das Raster in Bootstrap wird über Flexbox umgesetzt! 
+https://css-tricks.com/snippets/css/
+
+<div class="container">
+    <div class="row">
+        <div class="col">A</div>
+        <div class="col">B</div>
+        <div class="col">C</div>
+
+        <div class="col-3">A</div>
+        <div class="col-6">B</div>
+        <div class="col-3">C</div>
+
+        <div class="col-auto">A</div>
+        <div class="col-3">B</div>
+        <div class="col">C</div>        
+
+        <div class="col-sm-4 col-md-3">A</div>
+        <div class="col-sm-4 col-md-6">B</div>
+        <div class="col-sm-4 col-md-3">C</div>                
+    </div>
+</div>
+
++ Breakpoints
+Breakpoint          |   Klassen-Infix   |   Viewport-Breite
+--------------------|-------------------|-------------------
+x-small             |   -               |   < 574px
+small               |   sm              |   >= 576px
+medium              |   md              |   >= 768px
+large               |   lg              |   >= 992px
+extra large         |   xl              |   >= 1200px
+extra extra large   |   xxl             |   >= 1400px
+
++ Rasterelemente vertikal und horizontal anordnen
++ [vertikal]
+class="align-items-start"
+class="align-items-center"
+class="align-items-end"
+oder
+class="align-self-start"
+class="align-self-center"
+class="align-self-end"
+
++ [horizontal]
+class="justify-content-start"
+class="justify-content-center"
+class="justify-content-end"
+
++ Reihenfolge veändern
+<div class="container">
+    <div class="row">
+        <div class="col">A</div>
+        <div class="col order-2">B</div>
+        <div class="col order-3">C</div>
+        <div class="col">D</div>
+    </div>
+</div>
+Die Darstellung im Beispiel:
+A   D   B   C
+
++ Responsive Anpassungen
+<p class="text-end">.text-end</p>
+<p class="text-sm-end">.text-sm-end</p>
+<p class="text-md-end">.text-md-end</p>
+<p class="text-lg-end">.text-lg-end</p>
+
++ Inhalte bei Viewports verstecken
+<div class="container mx-auto">
+    <h3>ab Größe sm (576px) sichtbar<h3>
+    <p class="d-none d-sm-block bg-info">.d-none .d-sm-block</p>
+    <h3>nur bei Größe sm (576px) verstecken<h3>
+    <p class="d-sm-none d-md-block bg-info">.d-sm-none .d-md-block</p>    
+    <h3>ab Größe sm (576px) versteckt<h3>
+    <p class="d-block d-sm-none bg-info">.d-block .d-sm-none</p>    
+</div>
+-----------------------------------------------
+
+# Praktische Komponenten
++ Bilder anpassen
+<img src="bild.jpg" class="img-fluid">
+<img src="bild.jpg" class="img-fluid img-thumbnail">
+<img src="bild.jpg" class="img-fluid img-thumbnail float-start me-3">
+<img src="bild.jpg" class="img-fluid img-fluid rounded">
+
+<figure class="figure">
+    <img src="bild.jpg" class="figure-img img-fluid rounded"
+    <figcaption class="figure-caption">Bildbeschriftung</figcaption>
+</figure>
+
++ Card nutzen
+<div class="container mx-auto">
+    <div class="card-group">
+        <dif class="card">
+            <img src="bild.png" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Title</h5>
+                <p class="card-text>
+            </div>
+            <div class="card-footer">
+                <a href="#" class="btn btn-primary">Und los geht!</a>
+            </div>
+        </dif>
+    </div>
+</div>
+
++ Formulare erstellen
+
++ Karusell steuern
+
++ collapse - ein-/ausklappen
+
++ Responsive Klappenavigation
+
++ KI-Unterstützung
+ChatGPT
+GitHub Copilot (kostenpflichtig, 30 Tage Testversion)
+
+
+
+
 
