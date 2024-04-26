@@ -5,6 +5,6 @@ Bootstrap
 # Bootstrap Docs - Examples - Icons - Themes - Blog
 https://getbootstrap.com/docs/5.3/
 
-+ Suchfunktion in der Bootstrap-Dokumentation
++ Suchfunktion in der Bootstrap-Dokumentation aufrufen
 shift + strg + /
 
