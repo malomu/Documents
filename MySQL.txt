@@ -2,3 +2,7 @@
 MySQL
 #######################################
 
+# Strings zusammenführen
+UPDATE students SET CONCAT_WS('_', lastname, firstname);
+
+

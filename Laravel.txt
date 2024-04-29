@@ -1,0 +1,6 @@
+#######################################
+Laravel
+#######################################
+
+# Neues Projekt anlegen
+$ composer create-project laravel/laravel <projectname>
