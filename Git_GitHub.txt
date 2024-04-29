@@ -148,7 +148,21 @@ $ git push --set-upstraem origin "branch name"
 ++++++++++++++++++++++++++++
 Git - Tipps und Tricks LinkedIn
 ++++++++++++++++++++++++++++
-+ git stash
+- stash -
++ Zeigt die aktuelle stash-Liste an
+$ git stash list
+
++ Legt einen neuen stash an
+$ git stash save "test-01"
+
+Zeigt die Unterschiede zwischen dem Arbeitsverzeichnis und dem ausgewählten stash an
+$ git stash -p "stash@{0}"
+
+$ git stash apply "stash@{0}"
+
+$ git stash drop "stash@{0}"
+
+$ git stash clear
 
 
 ++++++++++++++++++++++++++++
