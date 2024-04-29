@@ -4,3 +4,7 @@ Laravel
 
 # Neues Projekt anlegen
 $ composer create-project laravel/laravel <projectname>
+
+# Internen Entwicklungsserver starten
++  Projektverzeichnis wechseln und Terminal öffnen
+$ php artisan serve
