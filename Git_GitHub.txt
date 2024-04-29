@@ -144,3 +144,15 @@ $ git push origin master
   |-> Die Änderungen sind aktuell in einem Branch
 $ git push --set-upstraem origin "branch name"
 
+
+++++++++++++++++++++++++++++
+Git - Tipps und Tricks LinkedIn
+++++++++++++++++++++++++++++
++ git stash
+
+
+++++++++++++++++++++++++++++
+Fragen
+++++++++++++++++++++++++++++
++ Was ist ein Draft-Commit?
+
