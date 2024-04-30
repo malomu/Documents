@@ -5,6 +5,30 @@ Laravel
 # Neues Projekt anlegen
 $ composer create-project laravel/laravel <projectname>
 
+
 # Internen Entwicklungsserver starten
 +  Projektverzeichnis wechseln und Terminal öffnen
 $ php artisan serve
+
+
+# Datenbank einrichten
++ Konfigurationsdatei ".env" Datei im Bereich "DB_CONNECTION"
++ config/database.php
+
+
+# DB_CONNECTION Test im Terminal folgende Standard Migration ausführen
++ /database/migrations
++ vordefinierte Standard Migration
+$ php artisan migrate
+
++ Migration rückgägngig machen
+$ php artisan migrate:rollback
+
++ eigene Migration definieren
++ es wird eine neue Migration-Datei im Verzeichnis /database/migrations angelegt
+$ php artisan make:migration create_test_table
+
+
+# Bootstrap Einbindung
+$ composer require laravel/ui
+$ composer artisan ui bootstrap
