@@ -30,5 +30,43 @@ $ php artisan make:migration create_test_table
 
 
 # Bootstrap Einbindung
+$ composer require laravel/ui (Linux Terminal)
+$ composer artisan ui bootstrap (Linux Terminal)
+oder 
++ Optionen des Befehls ui
+$ php artisan help ui
+
+
+# node.js / npm Version unter Ubuntu erneuern
++ löscht die aktuell installierte Version von node.js und npm
+$ sdo apt-get purge nodejs npm
+
++ Installiert die neueste Version von node.js und npm
+$ curl -L https://bit.ly/n-install | bash
+
+
+-----
+# Schritt für Schritt Anleitung bei Projekt-Neuanlage
+-----
++1 Projekt Grundgerüst erstellen
+$ composer create-project laravel/laravel <projectname>
+
++2 Datenbank Anbindung (MySQL)
++ /.env
+
++3 Ausführen der benötigten Tabellenstruktur
+$ php artisan migrate
+
++4 ui aktivieren
 $ composer require laravel/ui
-$ composer artisan ui bootstrap
++ ui testen
+$ php artisan help ui
+
++5 Auth-Gerüst einrichten
+$ php artisan ui bootstrap --auth
+
++6 npm installieren
+$ npm install
+
++7 npm ausführen
+$ npm run dev
