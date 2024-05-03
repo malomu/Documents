@@ -70,3 +70,37 @@ $ npm install
 
 +7 npm ausführen
 $ npm run dev
+
+
+-----
+# Steps To Install Bootstrap to a Laravel Application (Using NPM)
+-----
+
+--Step #1--
++ You need to install laravel/ui package.
+$ composer require laravel/ui
+
+Step #2
++ Add Bootstrap library using laravel/ui
+$ php artisan ui bootstrap
+
+--Step #3--
++ Install Bootstrap Icon
+$ npm install bootstrap-icons
+
++ Now, import icon css on resources\sass\app.scss,
++ File resources\sass\app.scss,
+/* Fonts */ 
+@import url('https://fonts.bunny.net/css?family=Nunito'); 
+
+/* Variables */ 
+@import 'variables'; 
+
+/* Bootstrap */ 
+@import 'bootstrap/scss/bootstrap'; 
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+--Step #4--
+Build CSS and JS File. Run these commands step by step to your project terminal.
+$ npm install 
+$ npm run build
