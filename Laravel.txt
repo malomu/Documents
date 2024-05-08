@@ -45,9 +45,9 @@ $ sdo apt-get purge nodejs npm
 $ curl -L https://bit.ly/n-install | bash
 
 
------
+------------------------------------------------------------------------
 # Schritt für Schritt Anleitung bei Projekt-Neuanlage
------
+------------------------------------------------------------------------
 +1 Projekt Grundgerüst erstellen
 $ composer create-project laravel/laravel <projectname>
 
@@ -72,9 +72,9 @@ $ npm install
 $ npm run dev
 
 
------
+------------------------------------------------------------------------
 # Steps To Install Bootstrap to a Laravel Application (Using NPM)
------
+------------------------------------------------------------------------
 
 --Step #1--
 + You need to install laravel/ui package.
@@ -104,3 +104,87 @@ $ npm install bootstrap-icons
 Build CSS and JS File. Run these commands step by step to your project terminal.
 $ npm install 
 $ npm run build
+
+
+
+
+
+
+#################################################
+Grundgerüst mit Testdaten erstellen
+#################################################
+
+------------------------------------------------------------------------
+# Migration | /Database/migrations
+------------------------------------------------------------------------
++ Migration erstellen
+$ php artisan make:migration create_songs_table
+
++ /Database/migrations 
++ Neu erstellten Migration-Datei editieren
++ Migration ausführen
+$ php artisan migrate
+
+
+------------------------------------------------------------------------
+# Model
+------------------------------------------------------------------------
++ Model erstellen
+$ php artisan make:Model Song
+
+
+------------------------------------------------------------------------
+# Factory | /Database/factories (Dummydaten anlegen)
+------------------------------------------------------------------------
++ Factory erstellen
+$ php artisan make:factory
+
++ Neu erstellte Factory-Datei editieren
++ Factory ausführen über Shell Tinker
+$ php artisan Tinker
+> use App\Models\Song;
+> $songs = Song::factory->counter(30)->create();
+
+
+------------------------------------------------------------------------
+# Eloquent-Operationen
+------------------------------------------------------------------------
++ Shell öffnen
+$ php artisan tinker
+
++ Namensraum ermitteln
+> use App\Models\Song;
+
++ Zeigt alle Songs aus der Tabelle "songs" an
+> $songs = Song::all();
+
++ Einzelne Datensätze anzeigen lassen
+> $song = Song::find(30);
+
++ Neuen Datensatz anlegen
+> $song = new Song();
+> $song->title = 'Ein neuer Titel';
+> $song->band = 'Bandname';
+> $song->save();
+
++ Datensatz löschen
+> $song = Song::find(31);
+> $song->delete();
+
+
+------------------------------------------------------------------------
+# Controller
+------------------------------------------------------------------------
++ Controller anlegen
+$ php artisan make:controller SongsController --resource
+
+
+------------------------------------------------------------------------
+# Routing
+------------------------------------------------------------------------
++ Namensraum in der Routing-Datei web.php bekanntgeben 
+use App\Http\Controller\SongController;
+Route::resource('/songs', SongController::class);
+
++ Alle Routen anzeigen lassen
+$ php artisan route:list
