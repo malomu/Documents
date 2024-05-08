@@ -126,11 +126,13 @@ $ php artisan make:migration create_songs_table
 $ php artisan migrate
 
 
+
 ------------------------------------------------------------------------
 # Model
 ------------------------------------------------------------------------
 + Model erstellen
 $ php artisan make:Model Song
+
 
 
 ------------------------------------------------------------------------
@@ -146,9 +148,30 @@ $ php artisan Tinker
 > $songs = Song::factory->counter(30)->create();
 
 
+
 ------------------------------------------------------------------------
 # Eloquent-Operationen
 ------------------------------------------------------------------------
+Eloquent ORM
+Object Relational Mapping (ORM) ist eine Programmiertechnik zur Konvertierung von Daten 
+zwischen relationalen Datenbanken und objektorientierten Programmiersprachen. 
+Mit der ORM-Technik können Objekte auf die Strukturen einer relationalen Datenbank abgebildet werden.
+
+Model definieren:
+class Song extends Model
+{
+    protected $table = 'songs';
+    protected $primaryKey = 'id';
+    protected $fillable = ['title','band',];
+}
+
+Wenn die Namenskonvention eingehalten wurde reicht auch das standard erzeugte Model
+Model-Name groß geschrieben singular und Tabellen Name kleingeschrieben und prural
+class Student extends Model
+{
+    use HasFactory;
+}
+
 + Shell öffnen
 $ php artisan tinker
 
@@ -172,11 +195,13 @@ $ php artisan tinker
 > $song->delete();
 
 
+
 ------------------------------------------------------------------------
 # Controller
 ------------------------------------------------------------------------
 + Controller anlegen
 $ php artisan make:controller SongsController --resource
+
 
 
 ------------------------------------------------------------------------
@@ -188,3 +213,67 @@ Route::resource('/songs', SongController::class);
 
 + Alle Routen anzeigen lassen
 $ php artisan route:list
+
++ Beispiel "href"
+<a href="/songs/{{ $song->id }}">
+
++ Beispiel "href" mit der URL-Hilfsfunktion
+<a href="{{ url('/songs', ['id'=> $song->id])}}
+
++ Helferfunktionen für vollständig qualifizierte URLs
+- url()
+- route() - erwartet Namen einer Route
+Parameter als Array übergeben
+{{ url('/notes',[$id => $notes -> id]) }}
+
+
+
+------------------------------------------------------------------------
+# MVC - Model-View-Controller
+------------------------------------------------------------------------
++ Modell (Model):
+Daten, die dargestellt werden sollen
+
++ Präsentation (View):
+Darstellung der Daten aus dem Modell und Entgegennahme von Benutzerinteraktionen
+
++ Steuerung (Controller):
+verwaltet Präsentation, sorgt dafür, dass Benutzeraktionen wirksam werden, indem sie 
+beispielsweise an das Modell weitergeleitet werden.
+
+
+
+------------------------------------------------------------------------
+# CSRF - Cross-Site-Request-Forgery (Website-übergreifende Anfragenfälschung)
+------------------------------------------------------------------------
+- Autorisierter Nutzer (überprüft beispielsweise über Cookies)
+- z.B. ihm untergeschobene URL mit bestimmter Aktion
+- diese Aktion wird mit seiner Autorisierung ausgeführt
+Beispiel:
+Die CSRF-Direktive muss im Formular hinterlegt sein!
+
+<form method="POST" action="/songs">
+    @csrf
+    .
+    .
+    <input type=" .....
+</form>
+
+
+
+------------------------------------------------------------------------
+# Fehlermeldungen eindeutschen
+------------------------------------------------------------------------
++ GitHub "Laravel-Lang/lang"
++ Application auf deutsch stellen "/.env" und/oder "/config/app.php"
++ Ordner aus GitHub in die Application kopieren
+
+
+
+------------------------------------------------------------------------
+# Query Builder (für Abfragen in Laravel)
+------------------------------------------------------------------------
+Beispiel:
+$user = DB::table('songs')->where('id','>',4)->get();
+oder
+$user = DB::table('songs')->where('id','>',4)->orderBy('title','asc')->get();
