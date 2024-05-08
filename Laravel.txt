@@ -158,10 +158,12 @@ zwischen relationalen Datenbanken und objektorientierten Programmiersprachen.
 Mit der ORM-Technik können Objekte auf die Strukturen einer relationalen Datenbank abgebildet werden.
 
 Model definieren:
+Laravel-Framework geht davon, dass der Primary-Key immer "id" heisst.
+Mit diesem Beispiel 
 class Song extends Model
 {
     protected $table = 'songs';
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'song_id';
     protected $fillable = ['title','band',];
 }
 
