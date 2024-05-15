@@ -275,7 +275,16 @@ Die CSRF-Direktive muss im Formular hinterlegt sein!
 ------------------------------------------------------------------------
 # Query Builder (für Abfragen in Laravel)
 ------------------------------------------------------------------------
+$ php artisan Tinker
 Beispiel:
 $user = DB::table('songs')->where('id','>',4)->get();
 oder
 $user = DB::table('songs')->where('id','>',4)->orderBy('title','asc')->get();
+
+
+
+------------------------------------------------------------------------
+# File-Upload
+------------------------------------------------------------------------
++ Files werden in folgenden Ordner von Laravel NICHT verschlüsselt abgelegt
+/storage/app/public/files
