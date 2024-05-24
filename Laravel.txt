@@ -48,27 +48,27 @@ $ curl -L https://bit.ly/n-install | bash
 ------------------------------------------------------------------------
 # Schritt für Schritt Anleitung bei Projekt-Neuanlage
 ------------------------------------------------------------------------
-+1 Projekt Grundgerüst erstellen
++1) Projekt Grundgerüst erstellen
 $ composer create-project laravel/laravel <projectname>
 
-+2 Datenbank Anbindung (MySQL)
++2) Datenbank Anbindung (MySQL)
 + /.env
 
-+3 Ausführen der benötigten Tabellenstruktur
++3) Ausführen der benötigten Tabellenstruktur
 $ php artisan migrate
 
-+4 ui aktivieren
++4) ui aktivieren
 $ composer require laravel/ui
 + ui testen
 $ php artisan help ui
 
-+5 Auth-Gerüst einrichten
++5) Auth-Gerüst einrichten
 $ php artisan ui bootstrap --auth
 
-+6 npm installieren
++6) npm installieren
 $ npm install
 
-+7 npm ausführen
++7) npm ausführen
 $ npm run dev
 
 
@@ -288,3 +288,10 @@ $user = DB::table('songs')->where('id','>',4)->orderBy('title','asc')->get();
 ------------------------------------------------------------------------
 + Files werden in folgenden Ordner von Laravel NICHT verschlüsselt abgelegt
 /storage/app/public/files
+
+
+
+------------------------------------------------------------------------
+# Daten speichern und abrufen
+------------------------------------------------------------------------
++ /config/session.php
