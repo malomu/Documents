@@ -45,6 +45,18 @@ $ sdo apt-get purge nodejs npm
 $ curl -L https://bit.ly/n-install | bash
 
 
+
+------------------------------------------------------------------------
+# artisan
+------------------------------------------------------------------------
++ Befehlsübersicht von artisan
+$ php artisan list
+
++ 
+$ php artisan:publish
+
+
+
 ------------------------------------------------------------------------
 # Schritt für Schritt Anleitung bei Projekt-Neuanlage
 ------------------------------------------------------------------------
@@ -295,3 +307,34 @@ $user = DB::table('songs')->where('id','>',4)->orderBy('title','asc')->get();
 # Daten speichern und abrufen
 ------------------------------------------------------------------------
 + /config/session.php
+
+
+
+------------------------------------------------------------------------
+# vite
+------------------------------------------------------------------------
++ Installieren von eigenen Styles
+/resources/css/app.css
+/resources/js/app.js
+
++ Einbindung in das Projekt (layout.blade.php)
+@vite(['resources/css/app.css','resources/js/app.js'])
+
++ vite-Konfigurationsdatei
+/ vite.config.js
+
++ vite-Server Referenz (für das Developsystem)
+$ npm run dev 
+<script type="module" src="http://127.0.0.1:5173/@vite/client"></script>
+<script type="module" src="http://127.0.0.1:5173/resources/js/app.js"></script>
+<link rel="stylesheet" href="http://127.0.0.1:5173/resources/css/app.css">
+
++ Laravel-Server Referenz (für Prod-System)
++ /public/build/assets
+$ npm run build 
+<link rel="preload" as="style" href="http://localhost:8002/build/assets/app-Adwxz7y0.css">
+<link rel="modulepreload" href="http://localhost:8002/build/assets/app-C1-XIpUa.js">
+<link rel="stylesheet" href="http://localhost:8002/build/assets/app-Adwxz7y0.css">
+<script type="module" src="http://localhost:8002/build/assets/app-C1-XIpUa.js></script>
+
+
