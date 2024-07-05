@@ -338,3 +338,16 @@ $ npm run build
 <script type="module" src="http://localhost:8002/build/assets/app-C1-XIpUa.js></script>
 
 
+------------------------------------------------------------------------
+# Validierung
+------------------------------------------------------------------------
+$ php artisan lang:publish
+
++ Ordner fuer de anlegen
+/lang/de/validation.php
+
++ Konfigurationsdatei editieren /.env
+APP_LOCALE=de
+APP_FALLBACK_LOCALE=de
+APP_FAKER_LOCALE=de
+
