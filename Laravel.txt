@@ -351,3 +351,17 @@ APP_LOCALE=de
 APP_FALLBACK_LOCALE=de
 APP_FAKER_LOCALE=de
 
+
+
+------------------------------------------------------------------------
+# SESSION 
+------------------------------------------------------------------------
+/.env
+
+SESSION_DRIVER
+SESSION_LIFETIME
+SESSION_ENCRYPT
+SESSION_PATH
+SESSION_DOMAIN
+
+$ php artisan config:cache
